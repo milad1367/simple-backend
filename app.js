@@ -19,10 +19,10 @@ app.post('/api/authenticate',(req, res,next) => {
     if((req.body.username == "admin")&&(req.body.password == "1")) {
         console.log(req.body)
 
-        res.send ({allow: true});
+        res.send ({ username: "admin", token: "TOKEN" , pic: "admin.jpg"});
     }
     else {
-        res.send ({});
+        res.send (401);
     }    
 })
 //app.listen(3000, () => console.log('Example app listening on port 3000!'))
