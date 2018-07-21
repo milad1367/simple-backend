@@ -19,7 +19,12 @@ app.post('/api/authenticate',(req, res,next) => {
     if((req.body.username == "admin")&&(req.body.password == "1")) {
         console.log(req.body)
 
-        res.send ({ username: "admin",fullName:"milad asghari", token: "TOKEN" , pic: "admin.jpg"});
+        res.send ({ username: "admin",
+                    fullName:"milad asghari",
+                    token: "TOKEN" ,
+                    winChips: "35",
+                    id:40,
+                    pic: "admin.jpg"});
     }
     else {
         res.send (401);
